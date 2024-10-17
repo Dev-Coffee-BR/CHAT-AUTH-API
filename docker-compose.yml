@@ -3,14 +3,14 @@ services:
     container_name: laravelapp
     build: .
     ports:
-      - "8000:8000"
+      - "8003:8003"
     env_file:
       - .env
     depends_on:
       - db
     volumes:
       - .:/var/www/html
-    restart: always  # Reinício automático
+    restart: always
 
   db:
     image: postgres:16
@@ -23,7 +23,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    restart: always  # Reinício automático
+    restart: always
 
 volumes:
   pgdata:
