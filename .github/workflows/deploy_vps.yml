@@ -12,8 +12,6 @@ jobs:
       - name: "PHP Composer install"
         run:  composer install --no-interaction --no-progress --no-suggest --no-dev --ignore-platform-reqs
 
-      - name: "Install octane"
-        uses: actions/checkout@v4
       - name: "PHP Composer install"
         run:  php artisan octane:install
 
